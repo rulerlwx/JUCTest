@@ -6,10 +6,8 @@ package com.demo.singlethread;
 public class Test {
     public static void main(String[] args) {
         for (int i = 0; i < 30; i++) {
-            new Thread(()->{
-//                SingleInstanceTest.getInstance();
-                DoubleCheckLockSingleInstanceTest.getSingleton();
-            },String.valueOf(i)).start();
+            // SingleInstanceTest.getInstance();
+            new Thread(DoubleCheckLockSingleInstanceTest::getSingleton,String.valueOf(i)).start();
         }
     }
 }
