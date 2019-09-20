@@ -21,7 +21,7 @@ class ShareResource{
     private Condition c2 = lock.newCondition();
     private Condition c3 = lock.newCondition();
 
-    public void print5(){
+    void print5(){
         lock.lock();
         try {
             // 1 判断
@@ -41,7 +41,7 @@ class ShareResource{
             lock.unlock();
         }
     }
-    public void print10(){
+    void print10(){
         lock.lock();
         try {
             // 1 判断
@@ -61,7 +61,7 @@ class ShareResource{
             lock.unlock();
         }
     }
-    public void print15(){
+    void print15(){
         lock.lock();
         try {
             // 1 判断
